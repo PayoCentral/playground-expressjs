@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "start.devWindows": "set PORT=5000&& set DEBUG=*&& set NODE_ENV=development&& node ./bin/www",
+    "start.devLinux": "PORT=5000 DEBUG=* NODE_ENV=development node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,5 +14,8 @@
     "http-errors": "~1.6.3",
     "jade": "^1.9.2",
     "morgan": "^1.12.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
